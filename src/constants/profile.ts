@@ -4,7 +4,7 @@ export const profileData = {
   tagline: "1st Year CSE Student at Loyola-ICAM College of Engineering",
 
   about: {
-    description: "As a Computer Science Engineering student at Loyola-ICAM College of Engineering and Technology (LICET), I focus on developing efficient software systems and data-driven applications. I prioritize a hands-on approach to engineering, specializing in the integration of front-end interfaces with robust back-end logic. My academic foundation in C++ and Python, combined with practical experience in IoT data visualization, drives my commitment to building scalable, high-performance digital solutions.",
+    description: "As a Computer Science Engineering student at LICET, I specialize in building end-to-end software architectures and data-driven web applications. My focus lies in developing robust back-end systems that process real-time data streams and translating them into intuitive, high-performance front-end interfaces. With a strong foundation in C++ and Python, I am dedicated to mastering full-stack development and optimizing software performance across the modern web stack.",
     goal: "To engineer robust, scalable software solutions by integrating front-end interactivity with secure back-end architectures. Focused on leveraging data-driven logic and modern full-stack frameworks to build high-performance digital systems."
   },
 
