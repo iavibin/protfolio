@@ -1,6 +1,6 @@
 export const profileData = {
   name: "Vibin I A",
-  title: "Full-Stack Enthusiast",
+  title: "Full-Stack Enthusiast | CGPA - ",
   tagline: "1st Year CSE Student at Loyola-ICAM College of Engineering",
 
   about: {
