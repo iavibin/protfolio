@@ -43,7 +43,7 @@ export const profileData = {
         number: 1,
         gpa: 7.81,
         status: "Completed",
-        focus: ["Python Programming", "Calculus", "Basic Electrical and Electronics Engineering"]
+        focus: ["Python Programming", "Calculus for Engineers", "Basic Electrical and Electronics Engineering"]
       },
       {
         number: 2,
