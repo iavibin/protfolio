@@ -1,11 +1,11 @@
 export const profileData = {
   name: "Vibin I A",
-  title: "Full-Stack Enthusiast | Robotics & AI Explorer",
+  title: "Full-Stack Enthusiast",
   tagline: "1st Year CSE Student at Loyola-ICAM College of Engineering",
 
   about: {
-    description: "As a first-year Computer Science Engineering student at Loyola-ICAM College of Engineering and Technology (LICET), I'm passionate about merging software development with robotics and artificial intelligence. I believe in learning by building and constantly pushing the boundaries of what's possible with code.",
-    goal: "My ultimate goal is to create intelligent systems that bridge the gap between the digital and physical world, combining my love for software engineering with cutting-edge robotics technology."
+    description: "As a Computer Science Engineering student at Loyola-ICAM College of Engineering and Technology (LICET), I focus on developing efficient software systems and data-driven applications. I prioritize a hands-on approach to engineering, specializing in the integration of front-end interfaces with robust back-end logic. My academic foundation in C++ and Python, combined with practical experience in IoT data visualization, drives my commitment to building scalable, high-performance digital solutions.",
+    goal: "To engineer robust, scalable software solutions by integrating front-end interactivity with secure back-end architectures. Focused on leveraging data-driven logic and modern full-stack frameworks to build high-performance digital systems."
   },
 
   skills: {
@@ -16,8 +16,8 @@ export const profileData = {
     ],
     learning: [
       { name: "C", icon: "code" },
-      { name: "HTML5", icon: "code" },
-      { name: "CSS3", icon: "palette" },
+      { name: "HTML", icon: "code" },
+      { name: "CSS", icon: "palette" },
       { name: "JavaScript", icon: "code" },
       { name: "MongoDB", icon: "database" },
       { name: "Git/GitHub", icon: "git-branch" }
@@ -43,13 +43,13 @@ export const profileData = {
         number: 1,
         gpa: 7.81,
         status: "Completed",
-        focus: ["Python Programming", "Calculus", "Electrical Engineering Fundamentals"]
+        focus: ["Python Programming", "Calculus", "Basic Electrical and Electronics Engineering"]
       },
       {
         number: 2,
         gpa: null,
         status: "In Progress",
-        focus: ["C Programming", "Probability and Queuing Theory", "Physics for Information Science"]
+        focus: ["C Programming", "Probability and Queuing Theory", "Engineering Graphics"]
       }
     ]
   },
