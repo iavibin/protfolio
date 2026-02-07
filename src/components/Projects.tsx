@@ -47,7 +47,8 @@ export const Projects = () => {
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
+                  </div>
                   <div className="p-8 flex flex-col justify-between">
                     <div>
                       <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
