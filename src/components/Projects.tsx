@@ -2,14 +2,25 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { profileData } from '../constants/profile';
-import { ExternalLink, Github } from 'lucide-react';
+import { RevealText } from './RevealText';
+import { ExternalLink, Github, Code2, Database, BarChart3 } from 'lucide-react';
+
+const getTechIcon = (tech: string) => {
+  const iconMap: { [key: string]: React.ReactNode } = {
+    python: <Code2 className="w-5 h-5" />,
+    flask: <Code2 className="w-5 h-5" />,
+    mysql: <Database className="w-5 h-5" />,
+    'chart.js': <BarChart3 className="w-5 h-5" />
+  };
+  return iconMap[tech.toLowerCase()] || <Code2 className="w-5 h-5" />;
+};
 
 export const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="projects" className="py-20 px-4 bg-gradient-to-b from-slate-900 to-black" ref={ref}>
+    <section id="projects" className="py-20 px-4 bg-[#0a0a0a]" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -17,14 +28,14 @@ export const Projects = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center">
-            Featured <span className="text-cyan-500">Projects</span>
+            <RevealText text="Featured Projects" delay={100} />
           </h2>
 
           <div className="grid gap-8">
             {profileData.projects.map((project, index) => (
               <motion.div
                 key={project.title}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 group"
+                className="bg-white/5 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group"
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.2 + index * 0.2, duration: 0.8 }}
@@ -36,7 +47,7 @@ export const Projects = () => {
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
                   </div>
 
                   <div className="p-8 flex flex-col justify-between">
@@ -48,15 +59,21 @@ export const Projects = () => {
                         {project.description}
                       </p>
 
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {project.tech.map((tech) => (
-                          <span
-                            key={tech}
-                            className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-cyan-400 text-sm font-medium"
-                          >
-                            {tech}
-                          </span>
-                        ))}
+                      <div className="mb-6">
+                        <p className="text-xs text-gray-500 font-semibold uppercase tracking-widest mb-3">Tech Stack</p>
+                        <div className="flex flex-wrap gap-3">
+                          {project.tech.map((tech) => (
+                            <div
+                              key={tech}
+                              className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300 group/tech"
+                            >
+                              <span className="text-cyan-400 group-hover/tech:text-cyan-300">
+                                {getTechIcon(tech)}
+                              </span>
+                              <span className="text-gray-300 text-sm font-medium">{tech}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
 

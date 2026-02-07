@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { profileData } from '../constants/profile';
+import { RevealText } from './RevealText';
 import { Mail, Linkedin, Github } from 'lucide-react';
 
 export const Contact = () => {
@@ -33,7 +34,7 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-4 bg-gradient-to-b from-black to-slate-900" ref={ref}>
+    <section id="contact" className="py-20 px-4 bg-[#0a0a0a]" ref={ref}>
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -41,7 +42,7 @@ export const Contact = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
-            Let's <span className="text-cyan-500">Connect</span>
+            <RevealText text="Let's Connect" delay={100} />
           </h2>
           <p className="text-gray-400 text-center mb-12 text-lg">
             Feel free to reach out for collaborations, opportunities, or just a friendly chat!
@@ -56,14 +57,14 @@ export const Contact = () => {
                   href={link.href}
                   target={link.name !== 'Email' ? '_blank' : undefined}
                   rel={link.name !== 'Email' ? 'noopener noreferrer' : undefined}
-                  className={`group bg-slate-800/50 backdrop-blur-sm p-6 rounded-xl border-2 border-slate-700 ${link.color} transition-all duration-300 hover:scale-105 hover:shadow-xl`}
+                  className={`group bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 ${link.color} transition-all duration-300 hover:scale-105 hover:shadow-xl`}
                   initial={{ opacity: 0, y: 30 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ delay: 0.2 + index * 0.1, duration: 0.6 }}
                   whileHover={{ y: -5 }}
                 >
                   <div className="flex flex-col items-center text-center space-y-4">
-                    <div className="p-4 bg-slate-700/50 rounded-full group-hover:scale-110 transition-transform duration-300">
+                    <div className="p-4 bg-white/10 rounded-full group-hover:scale-110 transition-transform duration-300 border border-white/20">
                       <Icon className="w-8 h-8 text-cyan-400" />
                     </div>
                     <div>
@@ -86,9 +87,9 @@ export const Contact = () => {
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.8, duration: 0.8 }}
           >
-            <div className="inline-block p-8 bg-slate-800/30 backdrop-blur-sm rounded-xl border border-slate-700">
-              <p className="text-gray-400 mb-4">
-                "Building the future, one line of code at a time."
+            <div className="inline-block p-8 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10">
+              <p className="text-gray-300 mb-4">
+                "Engineering digital solutions that bridge innovation and impact."
               </p>
               <div className="h-1 w-32 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full" />
             </div>

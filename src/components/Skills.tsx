@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { profileData } from '../constants/profile';
+import { RevealText } from './RevealText';
 import { Check, Zap } from 'lucide-react';
 
 export const Skills = () => {
@@ -9,7 +10,7 @@ export const Skills = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="skills" className="py-20 px-4 bg-slate-900" ref={ref}>
+    <section id="skills" className="py-20 px-4 bg-[#0a0a0a]" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -17,7 +18,7 @@ export const Skills = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center">
-            Technical <span className="text-cyan-500">Arsenal</span>
+            <RevealText text="Technical Arsenal" delay={100} />
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -35,11 +36,11 @@ export const Skills = () => {
                 {profileData.skills.known.map((skill, index) => (
                   <motion.div
                     key={skill.name}
-                    className="px-6 py-3 bg-green-500/10 border-2 border-green-500 rounded-lg text-green-400 font-semibold hover:bg-green-500/20 transition-all duration-300 hover:scale-105"
+                    className="px-5 py-2 bg-green-500/10 border border-green-500/40 rounded-lg text-green-400 text-sm font-semibold hover:bg-green-500/20 hover:border-green-400 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ delay: 0.3 + index * 0.1, duration: 0.4 }}
-                    whileHover={{ y: -5 }}
+                    whileHover={{ y: -2 }}
                   >
                     {skill.name}
                   </motion.div>
@@ -61,11 +62,11 @@ export const Skills = () => {
                 {profileData.skills.learning.map((skill, index) => (
                   <motion.div
                     key={skill.name}
-                    className="px-6 py-3 bg-cyan-500/10 border-2 border-cyan-500 rounded-lg text-cyan-400 font-semibold hover:bg-cyan-500/20 transition-all duration-300 hover:scale-105"
+                    className="px-5 py-2 bg-cyan-500/10 border border-cyan-500/40 rounded-lg text-cyan-400 text-sm font-semibold hover:bg-cyan-500/20 hover:border-cyan-400 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ delay: 0.5 + index * 0.1, duration: 0.4 }}
-                    whileHover={{ y: -5 }}
+                    whileHover={{ y: -2 }}
                   >
                     {skill.name}
                   </motion.div>
