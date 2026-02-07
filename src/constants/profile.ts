@@ -25,7 +25,7 @@ export const profileData = {
 
   projects: [
     {
-      title: "Real-Time Data Analytics Pipeline (AirGuard)",
+      title: "AirGuard",
       description: "Engineered a full-stack application to ingest and visualize real-time environmental telemetry. Developed a Flask-based REST API to handle asynchronous data streams, managed a relational SQL database for historical trend analysis, and built a dynamic web dashboard for data visualization.",
       image: "https://i.ibb.co/1tnpdbpV/airguard-project.jpg",
       tech: ["Python", "Flask", "MySQL", "Chart.js"],
