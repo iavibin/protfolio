@@ -162,4 +162,4 @@ export const Projects = () => {
 
                         href={project.github}
 
-                        target="_blank"
+                        target="_blank"></a>
