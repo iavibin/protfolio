@@ -163,3 +163,4 @@ export const Projects = () => {
                         href={project.github}
 
                         target="_blank"></a>
+                    </div>
