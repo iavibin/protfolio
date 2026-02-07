@@ -45,10 +45,8 @@ export const Projects = () => {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
-                  </div>
 
                   <div className="p-8 flex flex-col justify-between">
                     <div>
