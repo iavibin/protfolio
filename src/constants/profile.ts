@@ -1,7 +1,7 @@
 export const profileData = {
   name: "Vibin I A",
-  title: "Full-Stack Enthusiast | CGPA - #",
-  tagline: "1st Year CSE Student at Loyola-ICAM College of Engineering",
+  title: "Full-Stack Enthusiast | CGPA - 8.80",
+  tagline: "2nd Year CSE Student at Loyola-ICAM College of Engineering",
 
   about: {
     description: "As a Computer Science Engineering student at LICET, I specialize in building end-to-end software architectures and data-driven web applications. My focus lies in developing robust back-end systems that process real-time data streams and translating them into intuitive, high-performance front-end interfaces. Dedicated to mastering full-stack development and optimizing software performance."
@@ -11,15 +11,17 @@ export const profileData = {
     known: [
       { name: "C++", icon: "code" },
       { name: "Python", icon: "code" },
-      { name: "MySQL", icon: "database" }
+      { name: "MySQL", icon: "database" },
+      { name: "C", icon: "code" },
+      { name: "Git/GitHub", icon: "git-branch" }
     ],
     learning: [
-      { name: "C", icon: "code" },
       { name: "HTML", icon: "code" },
       { name: "CSS", icon: "palette" },
       { name: "JavaScript", icon: "code" },
+      { name: "Java", icon: "code" },
       { name: "MongoDB", icon: "database" },
-      { name: "Git/GitHub", icon: "git-branch" }
+      
     ]
   },
 
@@ -28,6 +30,16 @@ export const profileData = {
       title: "AirGuard",
       description: "Engineered a full-stack application to ingest and visualize real-time environmental telemetry. Developed a Flask-based REST API to handle asynchronous data streams, managed a relational SQL database for historical trend analysis, and built a dynamic web dashboard for data visualization.",
       image: "https://i.ibb.co/1tnpdbpV/airguard-project.jpg",
+      tech: ["Python", "Flask", "MySQL", "Chart.js"],
+      icons: ["python", "flask", "database", "chart"],
+      github: "https://github.com/iavibin/airguard",
+      featured: true
+    },
+
+    {
+      title: "Sentinel APK",
+      description: "Developed an automated mobile security app that intercepts and analyzes Android APKs before installation. It uses a proactive background daemon with the Android FileObserver API for 24/7 directory monitoring. A high-speed, asynchronous Python FastAPI engine ingests the binaries, running a static analysis pipeline via Androguard to deconstruct manifests and detect malicious permission clusters. Finally, a modern Kotlin and Jetpack Compose dashboard translates this complex risk data into an actionable safety matrix.",
+      image: "https://ibb.co/hFtQFV91",
       tech: ["Python", "Flask", "MySQL", "Chart.js"],
       icons: ["python", "flask", "database", "chart"],
       github: "https://github.com/iavibin/airguard",
