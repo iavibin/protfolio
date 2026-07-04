@@ -1,2 +1,2 @@
 protfolio
-https://iavibin-1x.bolt.host/
+https://iavibin.bolt.host/
