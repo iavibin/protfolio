@@ -40,9 +40,9 @@ export const profileData = {
       title: "Sentinel APK",
       description: "Developed an automated mobile security app that intercepts and analyzes Android APKs before installation. It uses a proactive background daemon with the Android FileObserver API for 24/7 directory monitoring. A high-speed, asynchronous Python FastAPI engine ingests the binaries, running a static analysis pipeline via Androguard to deconstruct manifests and detect malicious permission clusters. Finally, a modern Kotlin and Jetpack Compose dashboard translates this complex risk data into an actionable safety matrix.",
       image: "https://ibb.co/hFtQFV91",
-      tech: ["Python", "Flask", "MySQL", "Chart.js"],
+      tech: ["Kotlin", "Jetpack Compose", "FastAPI", "Androguard"],
       icons: ["python", "flask", "database", "chart"],
-      github: "https://github.com/iavibin/airguard",
+      github: "https://github.com/iavibin/sentinel-apk",
       featured: true
     }
   ],
