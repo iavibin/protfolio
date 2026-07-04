@@ -53,14 +53,14 @@ export const profileData = {
     semesters: [
       {
         number: 1,
-        gpa: 8.1,
+        gpa: 9.0,
         status: "Completed",
         focus: ["Python Programming", "Calculus for Engineers", "Basic Electrical and Electronics Engineering"]
       },
       {
         number: 2,
-        gpa: null,
-        status: "In Progress",
+        gpa: 8.6,
+        status: "Completed",
         focus: ["C Programming", "Probability and Queuing Theory", "Engineering Graphics"]
       }
     ]
